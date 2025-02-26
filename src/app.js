@@ -161,43 +161,7 @@ function mergeArrays(arr1, arr2) {
   console.log(user3.name);
   
   /*
-  #10 Ітератори
-  Умова: Напиши ітератор для об'єкта, 
-  який дозволить перебирати його властивості (ключі та значення) 
-  за допомогою циклу for...of.
-  
-  Створи об'єкт, що містить кілька властивостей.
-  Напиши метод для цього об'єкта, який повертатиме ітератор, 
-  що перебирає властивості об'єкта.
-  Використай цикл for...of, щоб вивести кожну пару "ключ: значення".
-  */
-  
-  const user5 = {
-    name: "Іван",
-    age: 25,
-    city: "Київ",
-  
-    [Symbol.iterator]: function () {
-      let entries = Object.entries(this);
-      let index = 0;
-      return {
-        next: function () {
-          if (index < entries.length) {
-            return { value: entries[index++], done: false };
-          } else {
-            return { done: true };
-          }
-        },
-      };
-    },
-  };
-  
-  for (const [key, value] of user5) {
-    console.log(`${key}: ${value}`);
-  }
-  
-  /*
-  #11 Генератори
+  #10 Генератори
   Створи генератор, який генерує числа від 1 до 5.
   */
   
